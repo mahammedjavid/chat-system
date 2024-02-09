@@ -97,13 +97,15 @@ const getUser = async (_req, res) => {
 const getCurrentUser = async (req, res) => {
     try {
         const accessToken = req.headers.authorization?.split(' ')[1];
-
+        console.log(accessToken)
         if (!accessToken) {
             res.status(401).json({ message: 'Access token not provided' });
             return;
         }
 
+
         const user_id = getUserFromToken(accessToken)?.user_id;
+        console.log(getUserFromToken(accessToken))
         const userInfo = (await client.query(getUserBasedOnId, [user_id])).rows;
         if (!userInfo) {
             res.status(401).json({ message: 'Invalid access token' });

@@ -26,6 +26,6 @@ const refreshAccessToken = (req, res) => {
 const calculateSubscriptionEndDate = (startDate, durationMonths) => {
     const endDate = new Date(startDate);
     endDate.setMonth(endDate.getMonth() + durationMonths);
-    return endDate.toISOString().split('T')[0];  // Format as 'YYYY-MM-DD'
+    return endDate?.toISOString()?.split('T')[0]; 
 };
 export { refreshAccessToken , calculateSubscriptionEndDate}

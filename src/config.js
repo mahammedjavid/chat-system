@@ -11,6 +11,7 @@ const config = {
 
     nodeEnv: process.env['NODE_ENV'] ?? 'development',
     port: process.env['PORT'] ?? 3000,
+    socketPort : process.env['socketPort'] ?? 3300,
 
     clientOrigins: {
         'test': process.env['DEV_ORIGIN'] ?? '*',

@@ -1,8 +1,8 @@
 {
-  "name": "node-express-starter-2022",
+  "name": "portfolio-server",
   "version": "1.0.1",
-  "description": "A node and express starter template for 2023",
-  "author": "Carter Adams <carteradams@gmail.com>",
+  "description": "portfolio server",
+  "author": "mahammedjavid8@gmail.com",
   "license": "MIT-0",
   "private": false,
   "main": "dist/index.js",
@@ -30,6 +30,7 @@
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
     "pg": "^8.11.3",
+    "socket.io": "^4.7.4",
     "stripe": "^14.13.0"
   },
   "devDependencies": {

@@ -34,8 +34,10 @@ const generateRefreshToken = (user) => {
 const getUserFromToken = (accessToken) => {
     try {
         const decoded = jwt.verify(accessToken, JWT_SECRET);
+        console.log(decoded)
         return decoded;
     } catch (error) {
+        console.log(error)
         return null;
     }
 };

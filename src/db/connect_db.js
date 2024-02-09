@@ -15,12 +15,12 @@ const client = new Client({
 const connectToDatabase = async () => {
     try {
         await client.connect();
-    //     const query = `
-    //     ALTER TABLE users
-    //     ADD COLUMN subscription_end_date DATE;
-    // `;
+//         const query = `
+//        ALTER TABLE all_messages
+// ALTER COLUMN media_url TYPE VARCHAR(700);
+// `;
     
-    // await client.query(query);
+//     await client.query(query);
         console.log('Connected to PostgreSQL database!');
     } catch (err) {
         console.error('Error connecting to the database:', err);
@@ -32,4 +32,4 @@ const closeDatabaseConnection = () => {
     console.log('Database connection closed');
 };
 
-export { connectToDatabase, client , closeDatabaseConnection };
+export { connectToDatabase, client, closeDatabaseConnection };
